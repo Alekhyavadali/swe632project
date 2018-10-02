@@ -5,7 +5,9 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // Material elements
-import {MatToolbarModule, MatButtonModule} from '@angular/material';
+import {MatToolbarModule,
+   MatButtonModule,
+   MatSidenavModule, MatIconModule, MatChipsModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,10 @@ import {MatToolbarModule, MatButtonModule} from '@angular/material';
     BrowserAnimationsModule,
     // Material
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
