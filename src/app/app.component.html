@@ -1,13 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div [class.dark-theme]="isDarkTheme">
-<div>
-  <app-navigation></app-navigation>
-  <mat-chip-list style="float:right">
-  <mat-chip color="active" style = "margin-top: 10px;"
-   selected (click) = "changeTheme()">Change Theme</mat-chip>
-</mat-chip-list>
-  <app-mainpage></app-mainpage>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav-content>
+      <div>
+          <router-outlet>
+            <app-navigation></app-navigation>
+            <mat-chip-list style="float:right">
+              <mat-chip color="active" style="margin-top: 10px;" selected (click)="changeTheme()">Change Theme</mat-chip>
+            </mat-chip-list>
+          </router-outlet>
+        </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
-</div>
-
-
