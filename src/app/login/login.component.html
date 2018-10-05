@@ -1,0 +1,23 @@
+
+<div class="align">Login</div>
+<form #newForm="ngForm" class="formfield" (ngSubmit)="submit(newForm.value)" autocomplete="off">
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label for="username">User Name</mat-label>
+            <input matInput placeholder="Placeholder"(ngModel)="username" 
+            name="username" required id="username" type="text">
+            <mat-icon matSuffix>verified_user</mat-icon>
+            <mat-hint>Please provide your username</mat-hint>
+          </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label for="password">Password</mat-label>
+            <input matInput placeholder="Placeholder"(ngModel)="password"  
+             name="password" required id="password" type="text">
+            <mat-icon matSuffix>fingerprint</mat-icon>
+            <mat-hint>Please provide your password</mat-hint>
+          </mat-form-field>
+    </div>
+    <button mat-raised-button type="submit" color = "primary" class="formbutton" [disabled]="newForm.invalid">Login</button>
+    </form>

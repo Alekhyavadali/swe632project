@@ -8,24 +8,32 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // Material elements
 import {MatToolbarModule,
    MatButtonModule,
-   MatSidenavModule, MatIconModule, MatChipsModule} from '@angular/material';
+   MatSidenavModule, MatIconModule,
+    MatChipsModule, MatAutocompleteModule, MatFormFieldModule, MatInputModule} from '@angular/material';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainpageComponent,
-    NavigationComponent
+    NavigationComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRouting,
+    FormsModule,
     // Material
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatChipsModule
+    MatChipsModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

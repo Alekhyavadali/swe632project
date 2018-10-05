@@ -1,0 +1,13 @@
+@media only screen and (min-width: 600px){
+.formfield {
+    margin-left:40%;
+    margin-top: 5%;
+}
+.formbutton {
+margin-top: 50px;
+margin-left:8%;
+}
+}
+/* input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+} */

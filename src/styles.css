@@ -4,3 +4,14 @@ body {
     margin: 0px;
     padding: 0px;
   }
+  .align {
+    text-align: center;
+    color: Grey;
+    font-family: 'Circular',sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        letter-spacing: 0;
+        text-rendering: geometricPrecision;
+        text-transform: none;
+    
+    }
