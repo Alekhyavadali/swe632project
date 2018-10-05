@@ -1,7 +1,13 @@
 <div>
-    <mat-toolbar color= "primary">
-   <mat-icon>home</mat-icon>
-   <span class="right-spacer"></span>
-   <button mat-button routerLink = "login" >Login</button>
-</mat-toolbar>
+    <mat-toolbar color="primary">
+        <button mat-button routerlink="mainpage" class="cursor" [disabled]="!dataservice.userLoggedIn">
+            <mat-icon>home</mat-icon>
+        </button>
+        <span class="right-spacer"></span>
+        <button mat-button class="cursor" [disabled]="!dataservice.userLoggedIn">
+            <mat-icon>settings</mat-icon>
+        </button>
+        <button mat-button (click)="dataservice.changeTheme()"  [disabled]="!dataservice.userLoggedIn">
+                   <mat-icon title="Change Theme">bubble_chart</mat-icon></button>
+    </mat-toolbar>
 </div>

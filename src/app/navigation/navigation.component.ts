@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Routes, RouterModule } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-navigation',
@@ -9,7 +10,7 @@ import { Routes, RouterModule } from '@angular/router';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor(router: Router) { }
+  constructor(private dataservice: DataService, router: Router) { }
 
   ngOnInit() {
   }
