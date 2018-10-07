@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { LoginComponent } from 'src/app/login/login.component';
 import { navigateRouteActivator } from './navigation/navigate-route-activator.service';
+import { JellyComponent } from './jelly/jelly.component';
 // Routes data structure
 const routes: Routes = [
     {
@@ -13,6 +14,10 @@ const routes: Routes = [
     {
         path:'',
         component:LoginComponent
+    },
+    {
+        path:'jelly',
+        component:JellyComponent
     },
 
 ];

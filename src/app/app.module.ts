@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import {AppRouting} from './app.routing.module';
+import {AppRouting} from './app.routing';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -15,13 +15,15 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { DataService } from './data.service';
 import { navigateRouteActivator } from './navigation/navigate-route-activator.service';
+import { JellyComponent } from './jelly/jelly.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainpageComponent,
     NavigationComponent,
-    LoginComponent
+    LoginComponent,
+    JellyComponent
   ],
   imports: [
     BrowserModule,
