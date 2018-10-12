@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { DataService } from './data.service';
-import { JellyComponent } from './jelly/jelly.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

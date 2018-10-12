@@ -3,21 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { LoginComponent } from 'src/app/login/login.component';
 import { navigateRouteActivator } from './navigation/navigate-route-activator.service';
-import { JellyComponent } from './jelly/jelly.component';
 // Routes data structure
 const routes: Routes = [
     {
-        path:'mainpage',
-        component:MainpageComponent,
+        path: 'mainpage',
+        component: MainpageComponent,
         canActivate: [navigateRouteActivator]
     },
     {
-        path:'',
-        component:LoginComponent
-    },
-    {
-        path:'jelly',
-        component:JellyComponent
+        path: '',
+        component: LoginComponent
     },
 
 ];
@@ -29,4 +24,4 @@ const routes: Routes = [
     exports: [RouterModule],
     providers: []
   })
-  export class AppRouting{ }
+  export class AppRouting { }

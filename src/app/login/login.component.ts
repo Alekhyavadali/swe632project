@@ -15,14 +15,14 @@ constructor(private dataservice: DataService, private router: Router) { }
   username: 'John',
   password: 'john123'
 }
-]
+];
   ngOnInit() {
   }
 submit(inputdata) {
-  for( let i=0; i< this.userList.length; i++){
-    if((this.userList[i].username === inputdata.username) && (this.userList[i].password === inputdata.password)){
+  for ( let i = 0; i < this.userList.length; i++) {
+    if ((this.userList[i].username === inputdata.username) && (this.userList[i].password === inputdata.password)) {
       this.dataservice.userLoggedIn = true;
-      this.router.navigate(['mainpage'])
+      this.router.navigate(['mainpage']);
     }
   }
 }
