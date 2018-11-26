@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import {CardModel} from './card.model';
 import {VideoModel} from './video.model';
+import {MatSnackBar} from '@angular/material';
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor() { }
+  constructor( public snackBar: MatSnackBar) { }
   userLoggedIn: boolean = false;
   isDarkTheme: boolean = false;
   searchedCourse: String;
@@ -146,4 +147,9 @@ export class DataService {
        console.log(this.isDarkTheme);
     }
   }
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 4000,
+    });
+}
 }

@@ -1,7 +1,7 @@
 <div>
     <mat-toolbar color="primary">
         <!-- Home only when user loggedin -->
-        <button mat-button *ngIf="dataservice.userLoggedIn" title="Home Page" routerlink="mainpage" class="cursor">
+        <button mat-button *ngIf="dataservice.userLoggedIn" title="Home Page" (click)="clickHome()" class="cursor">
             <mat-icon>home</mat-icon>
         </button>
         <!-- Courses -->

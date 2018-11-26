@@ -20,4 +20,7 @@ export class NavigationComponent implements OnInit {
   clickcourse(){
     this.router.navigateByUrl('courses')
   }
+  clickHome(){
+    this.router.navigateByUrl('')
+  }
 }

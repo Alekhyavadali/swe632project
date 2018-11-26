@@ -26,7 +26,7 @@ submit(inputdata) {
       this.router.navigateByUrl('');
     }
     else {
-      this.openSnackBar('passwords or username incorrect', 'Check again');
+      this.dataservice.openSnackBar('passwords or username incorrect', 'Check again');
     }
   }
 }
@@ -40,12 +40,8 @@ if(inputdata.password1 === inputdata.password2) {
   this.dataservice.userLoggedIn = true;
 }
 else {
-  this.openSnackBar('passwords should match', 'Password');
+  this.dataservice.openSnackBar('passwords should match', 'Password');
 }
 }
-openSnackBar(message: string, action: string) {
-  this.snackBar.open(message, action, {
-    duration: 2000,
-  });
-}
+
 }
