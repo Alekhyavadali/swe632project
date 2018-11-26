@@ -2,11 +2,12 @@
 
 <mat-form-field  class="search">
   <mat-label>Search for Courses</mat-label>
-  <input matInput (ngModel)="dataservice.searchedCourse" name="searchedCourse" id="searchedCourse">
+  <input matInput (ngModel)="dataservice.searchedCourse" #search
+  (input)="filterItem(search.value)" name="searchedCourse" id="searchedCourse">
 </mat-form-field>
 <mat-icon matSuffix>search</mat-icon>
 <mat-grid-list cols="2" rowHeight="1:1">
-  <mat-grid-tile *ngFor="let course of dataService.courses">
+  <mat-grid-tile *ngFor="let course of filteredItems">
     <mat-card class="example-card" >
       <mat-card-header>
         <!-- <div mat-card-avatar class="example-header-image"></div> -->
