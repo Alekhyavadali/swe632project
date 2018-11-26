@@ -10,18 +10,26 @@ import {MatToolbarModule,
    MatButtonModule,
    MatSidenavModule, MatIconModule,
     MatChipsModule, MatAutocompleteModule, MatFormFieldModule,
-     MatInputModule, MatSelectModule, MatListModule} from '@angular/material';
+     MatInputModule, MatSelectModule, MatListModule, MatMenuModule,
+      MatCardModule, MatGridListModule, MatExpansionModule, MatSnackBarModule} from '@angular/material';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { DataService } from './data.service';
 import { navigateRouteActivator } from './navigation/navigate-route-activator.service';
-
+import { CoursesComponent } from './courses/courses.component';
+import { VideosComponent } from './videos/videos.component';
+import { SafePipe } from './safe.pipe';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
     MainpageComponent,
     NavigationComponent,
     LoginComponent,
+    CoursesComponent,
+    VideosComponent,
+    SafePipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -30,15 +38,20 @@ import { navigateRouteActivator } from './navigation/navigate-route-activator.se
     FormsModule,
     // Material
     MatToolbarModule,
+    MatSnackBarModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
     MatChipsModule,
+    MatCardModule,
+    MatExpansionModule,
     MatAutocompleteModule,
+    MatGridListModule,
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatListModule
+    MatListModule,
+    MatMenuModule
   ],
   providers: [DataService, navigateRouteActivator],
   bootstrap: [AppComponent]

@@ -1,13 +1,26 @@
 <div>
     <mat-toolbar color="primary">
-        <button mat-button routerlink="mainpage" class="cursor" [disabled]="!dataservice.userLoggedIn">
+        <!-- Home only when user loggedin -->
+        <button mat-button *ngIf="dataservice.userLoggedIn" title="Home Page" routerlink="mainpage" class="cursor">
             <mat-icon>home</mat-icon>
         </button>
+        <!-- Courses -->
+        <button mat-button class="cursor" title="check the courses" (click) = "clickcourse()">
+            COURSES
+        </button>
+
         <span class="right-spacer"></span>
-        <button mat-button class="cursor" [disabled]="!dataservice.userLoggedIn">
+        <!-- Right Menu. Signup/signin menu when user is not logged in -->
+        <button mat-button class="cursor" mat-button *ngIf="!dataservice.userLoggedIn" title="Signup to avail exclusive features" (click) = "clicksign()">
+            SIGN UP | LOG IN
+        </button>
+        <!-- Signup will change to settings -->
+        <button mat-button [matMenuTriggerFor]="menu"  title="Change settings" *ngIf="dataservice.userLoggedIn">
             <mat-icon>settings</mat-icon>
         </button>
-        <button mat-button (click)="dataservice.changeTheme()"  [disabled]="!dataservice.userLoggedIn">
-                   <mat-icon title="Change theme">bubble_chart</mat-icon></button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="dataservice.changeTheme()">Change Theme</button>
+            <button mat-menu-item>My Profile</button>
+        </mat-menu>
     </mat-toolbar>
 </div>

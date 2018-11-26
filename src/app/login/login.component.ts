@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from './login.model';
 import {DataService} from '../data.service';
 import { Router } from '@angular/router';
+import {MatSnackBar} from '@angular/material';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-constructor(private dataservice: DataService, private router: Router) { }
+constructor(private dataservice: DataService, private router: Router, public snackBar: MatSnackBar) { }
  userList: User[] = [
 {
   username: 'John',
@@ -22,8 +23,29 @@ submit(inputdata) {
   for ( let i = 0; i < this.userList.length; i++) {
     if ((this.userList[i].username === inputdata.username) && (this.userList[i].password === inputdata.password)) {
       this.dataservice.userLoggedIn = true;
-      this.router.navigate(['mainpage']);
+      this.router.navigateByUrl('');
+    }
+    else {
+      this.openSnackBar('passwords or username incorrect', 'Check again');
     }
   }
+}
+submitsignup(inputdata) {
+if(inputdata.password1 === inputdata.password2) {
+  this.userList.push(
+    {username : inputdata.username,
+      password: inputdata.password1
+    }
+  );
+  this.dataservice.userLoggedIn = true;
+}
+else {
+  this.openSnackBar('passwords should match', 'Password');
+}
+}
+openSnackBar(message: string, action: string) {
+  this.snackBar.open(message, action, {
+    duration: 2000,
+  });
 }
 }

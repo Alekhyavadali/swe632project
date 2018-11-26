@@ -1,7 +1,10 @@
-
-<div class="align">Login</div>
-<form #newForm="ngForm" class="formfield" (ngSubmit)="submit(newForm.value)" autocomplete="off">
-    <div>
+<div class="setfoot">
+<div><h2 style="text-align:center;">REGISTRATION  </h2></div>
+<div style="width:100%">
+    <div style="width:50%; float:left">
+            <div><h2 style="text-align:center;">LOG IN  </h2></div>
+<form #newForm="ngForm"  class="formfield" (ngSubmit)="submit(newForm.value)" autocomplete="off">
+         <div>
         <mat-form-field appearance="outline">
             <mat-label for="username">User Name</mat-label>
             <input matInput placeholder="Placeholder"(ngModel)="username" 
@@ -19,5 +22,44 @@
             <mat-hint>Please provide your password</mat-hint>
           </mat-form-field>
     </div>
-    <button mat-raised-button type="submit" color = "primary" class="formbutton" [disabled]="newForm.invalid">Login</button>
+
+    <button mat-raised-button 
+    type="submit" color = "primary" class="formbutton" [disabled]="newForm.invalid">Login</button>
     </form>
+
+</div>
+
+<div style="width:50%; float:left">
+        <div><h2 style="text-align:center;">SIGN UP  </h2></div>
+        <form #newForm1="ngForm" class="formfield" (ngSubmit)="submitsignup(newForm1.value)" autocomplete="off">
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label for="username1">User Name</mat-label>
+                        <input matInput placeholder="Placeholder"(ngModel)="username1" 
+                        name="username1" required id="username1" type="text">
+                        <mat-icon matSuffix>verified_user</mat-icon>
+                        <mat-hint>Please provide your username</mat-hint>
+                      </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label for="password1">Password</mat-label>
+                        <input matInput type = "password" placeholder="Placeholder"(ngModel)="password1"  
+                         name="password1" required id="password1">
+                        <mat-icon matSuffix>fingerprint</mat-icon>
+                        <mat-hint>Please provide your password</mat-hint>
+                      </mat-form-field>
+                      <mat-form-field appearance="outline">
+                            <mat-label for="password2"> Confirm Password</mat-label>
+                            <input matInput type = "password" placeholder="Placeholder"(ngModel)="password2"  
+                             name="password2" required id="password2">
+                            <mat-icon matSuffix>fingerprint</mat-icon>
+                            <mat-hint>Please confirm password</mat-hint>
+                          </mat-form-field>
+                </div>
+                <button mat-raised-button type="submit" color = "primary" class="formbutton" [disabled]="newForm1.invalid">Sign Up</button>
+                </form>
+</div>
+
+</div>
+</div>

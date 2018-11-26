@@ -11,3 +11,12 @@ margin-left:8%;
 /* input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px white inset;
 } */
+.setfoot {
+    margin-bottom: 45%;
+}
+.vl {
+    border-left: 2px solid black;
+    height: 500px;
+    margin-left: 95%;
+    margin-top:-40px;
+}

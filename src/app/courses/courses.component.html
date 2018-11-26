@@ -1,0 +1,30 @@
+<h2 style="text-align: center">SELECT A COURSE</h2>
+
+<mat-form-field  class="search">
+  <mat-label>Search for Courses</mat-label>
+  <input matInput (ngModel)="dataservice.searchedCourse" name="searchedCourse" id="searchedCourse">
+</mat-form-field>
+<mat-icon matSuffix>search</mat-icon>
+<mat-grid-list cols="2" rowHeight="1:1">
+  <mat-grid-tile *ngFor="let course of dataService.courses">
+    <mat-card class="example-card" >
+      <mat-card-header>
+        <!-- <div mat-card-avatar class="example-header-image"></div> -->
+        <mat-card-title>{{course.cardtitle}}</mat-card-title>
+        <mat-card-subtitle>{{course.cardsubtitle}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image (click)="clickvideo(course)" src="{{course.cardimage}}" alt="Photo of Math"
+       style="max-height:300px; min-height:300px;cursor: pointer;">
+      <mat-card-content>
+        <p>
+          {{course.intro}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-icon-button (click)="course.liked = !course.liked;">
+          <mat-icon [ngClass]="{'clicked' : course.liked}" aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

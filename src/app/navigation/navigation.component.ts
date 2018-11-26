@@ -10,8 +10,14 @@ import { DataService } from '../data.service';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor(private dataservice: DataService, router: Router) { }
+  constructor(private dataservice: DataService,private router: Router) { }
 
   ngOnInit() {
+  }
+  clicksign(){
+    this.router.navigateByUrl('login')
+  }
+  clickcourse(){
+    this.router.navigateByUrl('courses')
   }
 }

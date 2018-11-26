@@ -1,0 +1,34 @@
+.video {
+    width: 70%;
+    float: left;
+    margin-top: 100px;
+}
+.panel {
+    width: 30%;
+    float: left;
+    margin-top: 100px;
+    min-height: 400px;
+}
+.mat-accordion {
+    max-width:10px;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.centered {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    color:white;
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.clicked {
+    background-color: blue;
+}

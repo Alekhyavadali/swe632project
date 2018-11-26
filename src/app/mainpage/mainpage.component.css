@@ -9,3 +9,31 @@ font-family: 'Circular',sans-serif;
     text-transform: none;
 
 }
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.centered {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    color:#212121;
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.centered2 {
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.mat-raised-button {
+   min-width:400px;
+   min-height: 50px;
+   border-radius: 25px;
+}
