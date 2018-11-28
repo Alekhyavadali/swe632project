@@ -1,15 +1,19 @@
 <div>
     <mat-toolbar color="primary">
         <!-- Home only when user loggedin -->
-        <button mat-button *ngIf="dataservice.userLoggedIn" title="Home Page" (click)="clickHome()" class="cursor">
+        <div (click)="clickHome()" style="cursor:pointer">
+            <mat-icon>school</mat-icon>
+            INFORMAL SCHOOL</div>
+            <span class="right-spacer"></span>
+        <!-- <button mat-button *ngIf="dataservice.userLoggedIn" title="Home Page" (click)="clickHome()" class="cursor">
             <mat-icon>home</mat-icon>
-        </button>
+        </button> -->
         <!-- Courses -->
         <button mat-button class="cursor" title="check the courses" (click) = "clickcourse()">
             COURSES
         </button>
-
-        <span class="right-spacer"></span>
+        
+        
         <!-- Right Menu. Signup/signin menu when user is not logged in -->
         <button mat-button class="cursor" mat-button *ngIf="!dataservice.userLoggedIn" title="Signup to avail exclusive features" (click) = "clicksign()">
             SIGN UP | LOG IN
@@ -20,7 +24,8 @@
         </button>
         <mat-menu #menu="matMenu">
             <button mat-menu-item (click)="dataservice.changeTheme()">Change Theme</button>
-            <button mat-menu-item>My Profile</button>
+            <button mat-menu-item (click) = "clickProfile()">My Profile</button>
+            <button mat-menu-item (click) = "clickLogOut()">Log out</button>
         </mat-menu>
     </mat-toolbar>
 </div>

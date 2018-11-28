@@ -20,6 +20,8 @@ import { CoursesComponent } from './courses/courses.component';
 import { VideosComponent } from './videos/videos.component';
 import { SafePipe } from './safe.pipe';
 import { FooterComponent } from './footer/footer.component';
+import { ProfileComponent } from './profile/profile.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { FooterComponent } from './footer/footer.component';
     CoursesComponent,
     VideosComponent,
     SafePipe,
-    FooterComponent
+    FooterComponent,
+    ProfileComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

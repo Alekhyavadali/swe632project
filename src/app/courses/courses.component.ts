@@ -29,7 +29,7 @@ filterItem(input) {debugger;
   }
   else {
     this.filteredItems = [];
-this.filteredItems = this.dataService.courses.filter(CardModel => CardModel.cardtitle.includes(input));
+this.filteredItems = this.dataService.courses.filter(CardModel => CardModel.cardtitle.toLowerCase().includes(input.toLowerCase()));
 debugger;
 console.log(this.filteredItems);
   }

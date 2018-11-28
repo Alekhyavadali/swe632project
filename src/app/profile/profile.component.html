@@ -1,0 +1,13 @@
+<div class="forFooter">
+<h2> USER PROFILE</h2>
+<!-- <input type="file" id="myFile" accept="image/gif, image/jpeg, image/png" [(ngModel)] = "photo" >
+<button (click) = "savePhoto(photo)">Save</button>
+<img src="{{photo}}" alt="photo will come"> -->
+<mat-card style="width:400px;height:400px; margin-left:35%">
+<img [src]="url" height="400px; width:400px;"> <br/>
+<input *ngIf = "!url" type='file' (change)="onSelectFile($event)">
+<hr>
+<h4>Profile Picture</h4>
+</mat-card>
+</div>
+

@@ -5,6 +5,8 @@ import { LoginComponent } from 'src/app/login/login.component';
 import { navigateRouteActivator } from './navigation/navigate-route-activator.service';
 import { CoursesComponent } from './courses/courses.component';
 import { VideosComponent } from './videos/videos.component';
+import { ProfileComponent } from './profile/profile.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 // Routes data structure
 const routes: Routes = [
     {
@@ -22,6 +24,14 @@ const routes: Routes = [
     {
         path: 'login',
         component: LoginComponent
+    },
+    {
+        path: 'profile',
+        component: ProfileComponent
+    },
+    {
+        path: 'aboutus',
+        component: AboutUsComponent
     },
 
 ];

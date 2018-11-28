@@ -18,11 +18,11 @@ font-family: 'Circular',sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 50px;
-    color:#212121;
+    color:grey;
     text-transform: uppercase;
     margin: 0;
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }

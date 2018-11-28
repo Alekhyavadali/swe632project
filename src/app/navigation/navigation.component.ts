@@ -23,4 +23,11 @@ export class NavigationComponent implements OnInit {
   clickHome(){
     this.router.navigateByUrl('')
   }
+  clickLogOut(){
+    this.dataservice.userLoggedIn = false;
+    this.router.navigateByUrl('');
+  }
+  clickProfile(){
+    this.router.navigateByUrl('profile');
+  }
 }
