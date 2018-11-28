@@ -2,15 +2,17 @@ import { Injectable } from '@angular/core';
 import {CardModel} from './card.model';
 import {VideoModel} from './video.model';
 import {MatSnackBar} from '@angular/material';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor( public snackBar: MatSnackBar) { }
+  constructor( public snackBar: MatSnackBar, private router: Router) { }
   userLoggedIn: boolean = false;
   isDarkTheme: boolean = false;
   searchedCourse: String;
+  username: String;
   clickedCourse: CardModel;
   mathVideos:VideoModel[] = [
     {
@@ -151,5 +153,13 @@ export class DataService {
     this.snackBar.open(message, action, {
       duration: 4000,
     });
+}
+clickvideo(video){
+  if(this.userLoggedIn == true){
+this.clickedCourse = video;
+this.router.navigateByUrl('videos');}
+else {
+this.openSnackBar('Please login to check the courses', 'Click Log In/Sign Up');
+}
 }
 }

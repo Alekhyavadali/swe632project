@@ -15,14 +15,7 @@ export class CoursesComponent implements OnInit {
     this.filterItem('');
   }
   filteredItems: CardModel[] = null;
-clickvideo(video){
-  if(this.dataService.userLoggedIn == true){
-this.dataService.clickedCourse = video;
-this.router.navigateByUrl('videos');}
-else {
-this.dataService.openSnackBar('Please login to check the courses', 'Click Log In/Sign Up');
-}
-}
+
 filterItem(input) {debugger;
   if(input ==null || input == undefined) {
     this.filteredItems = this.dataService.courses;

@@ -30,4 +30,7 @@ export class NavigationComponent implements OnInit {
   clickProfile(){
     this.router.navigateByUrl('profile');
   }
+  clickAboutUs(){
+    this.router.navigateByUrl('aboutus');
+  }
 }

@@ -23,6 +23,7 @@ submit(inputdata) {
   for ( let i = 0; i < this.userList.length; i++) {
     if ((this.userList[i].username === inputdata.username) && (this.userList[i].password === inputdata.password)) {
       this.dataservice.userLoggedIn = true;
+      this.dataservice.username = this.userList[i].username;
       this.router.navigateByUrl('');
     }
     else {
@@ -30,14 +31,16 @@ submit(inputdata) {
     }
   }
 }
-submitsignup(inputdata) {
+submitsignup(inputdata) {debugger;
 if(inputdata.password1 === inputdata.password2) {
   this.userList.push(
-    {username : inputdata.username,
+    {username : inputdata.username1,
       password: inputdata.password1
     }
   );
+  this.dataservice.username = inputdata.username1;
   this.dataservice.userLoggedIn = true;
+  this.router.navigateByUrl('courses')
 }
 else {
   this.dataservice.openSnackBar('passwords should match', 'Password');
