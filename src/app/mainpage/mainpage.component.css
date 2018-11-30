@@ -28,9 +28,10 @@ font-family: 'Circular',sans-serif;
 }
 .centered2 {
     position: absolute;
-    top: 68%;
-    left: 50%;
+    top: 40%;
+    left: 49.25%;
     transform: translate(-50%, -50%);
+    color: black;
 }
 .mat-raised-button {
    min-width:400px;
