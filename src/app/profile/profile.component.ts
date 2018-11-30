@@ -9,21 +9,11 @@ export class ProfileComponent implements OnInit {
 
   constructor() { }
 url: String ;
+reader = new FileReader();;
+target:EventTarget;
   ngOnInit() {
   }
 savePhoto(input) {
   debugger;
-}
-onSelectFile(event) { // called each time file input changes
-  if (event.target.files && event.target.files[0]) {
-    var reader = new FileReader();
-
-    reader.readAsDataURL(event.target.files[0]); // read file as data url
-
-    reader.onload = (event) => { // called once readAsDataURL is completed
-      debugger;
-      this.url = event.target.result;
-    }
-  }
 }
 }

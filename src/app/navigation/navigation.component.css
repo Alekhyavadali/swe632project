@@ -1,8 +1,10 @@
 @media only screen and (min-width: 600px){
 .right-spacer {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap;
     flex: 1 1 auto;
-    position: relative;
+    position: relative; */
+  float: none;
+  display: inline-block;
   }
   .search {
     padding-left:350px;
@@ -12,5 +14,8 @@
   }
   .heading {
     margin-left:34%;
+  }
+  .goright {
+float: right;
   }
 }

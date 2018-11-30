@@ -37,3 +37,19 @@ font-family: 'Circular',sans-serif;
    min-height: 50px;
    border-radius: 25px;
 }
+.styleoftext {
+    line-height: 1.5em;
+    font-family: American Typewriter, serif;
+    color:gray;
+    text-align: justify;
+    margin-right:5%
+}
+.example-card {
+    max-width: 400px;
+    
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
