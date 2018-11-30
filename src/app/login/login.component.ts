@@ -40,7 +40,7 @@ if(inputdata.password1 === inputdata.password2) {
   );
   this.dataservice.username = inputdata.username1;
   this.dataservice.userLoggedIn = true;
-  this.router.navigateByUrl('courses')
+  this.router.navigateByUrl('')
 }
 else {
   this.dataservice.openSnackBar('passwords should match', 'Password');
