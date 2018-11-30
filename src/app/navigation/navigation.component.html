@@ -4,7 +4,7 @@
     <div (click)="clickHome()" class="cursor right-spacer">
         <button mat-button>
             <mat-icon>cloud</mat-icon>
-            INFORMAL SCHOOL
+            ECADAMICS
         </button></div>
     <!-- <div class="right-spacer"> -->
     <!-- <button mat-button *ngIf="dataservice.userLoggedIn" title="Home Page" (click)="clickHome()" class="cursor">
@@ -23,7 +23,7 @@
     <mat-menu #menu="matMenu">
             <span (mouseleave)="menu2Trigger.closeMenu()">
         <button mat-menu-item (click)="dataservice.changeTheme()">Change Theme</button>
-        <button mat-menu-item (click)="clickProfile()">My Profile</button>
+        <!-- <button mat-menu-item (click)="clickProfile()">My Profile</button> -->
         <button mat-menu-item (click)="clickLogOut()">Log out</button>
 </span>
     </mat-menu>
@@ -31,16 +31,16 @@
          [matMenuTriggerFor]="courseMenu" title="check the courses">
         COURSES<mat-icon>keyboard_arrow_down</mat-icon>
     </button>
-    <mat-menu #courseMenu="matMenu">
-            <span (mouseleave)="menuTrigger.closeMenu()">
+    <mat-menu #courseMenu="matMenu" >
+            <span (mouseleave)="menuTrigger.closeMenu()" >
         <button mat-menu-item (click)="dataservice.clickvideo(courses)" *ngFor="let courses of dataservice.courses">
             {{courses.cardtitle}}</button>
 </span>
     </mat-menu>
-    <button mat-button class="cursor right-spacer goright" title="Know about us" (click)="clickAboutUs()">
+    <!-- <button mat-button class="cursor right-spacer goright" title="Know about us" (click)="clickAboutUs()">
         ABOUT US
-    </button>
-    <button mat-button class="cursor right-spacer goright" title="Report" *ngIf="dataservice.userLoggedIn">
+    </button> -->
+    <button mat-button class="cursor right-spacer goright" (click) = "clickReport()" title="Report Card" *ngIf="dataservice.userLoggedIn">
             REPORT CARD
         </button>
     <!-- </div> -->

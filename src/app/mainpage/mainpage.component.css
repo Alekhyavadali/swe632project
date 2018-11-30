@@ -1,3 +1,4 @@
+@media only screen and (min-width: 600px){
 .align {
 text-align: center;
 color: Grey;
@@ -38,6 +39,7 @@ font-family: 'Circular',sans-serif;
    min-height: 50px;
    border-radius: 25px;
 }
+
 .styleoftext {
     line-height: 1.5em;
     font-family: American Typewriter, serif;
@@ -54,3 +56,11 @@ font-family: 'Circular',sans-serif;
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
   }
+  .longtext {
+    margin-left:300px;
+    margin-right:300px;
+    text-align:center;
+    margin-bottom: 0px;
+  }
+}
+

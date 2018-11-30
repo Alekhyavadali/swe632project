@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CardModel } from './card.model';
 import { VideoModel } from './video.model';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar, MatSnackBarConfig,  MatSnackBarVerticalPosition } from '@angular/material';
 import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,7 @@ export class DataService {
   userLoggedIn: boolean = false;
   isDarkTheme: boolean = false;
   searchedCourse: String;
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
   username: String;
   clickedCourse: CardModel;
   mathVideos: VideoModel[] = [
@@ -170,17 +171,18 @@ export class DataService {
     }
   }
   openSnackBar(message: string, action: string) {
-    this.snackBar.open(message, action, {
-      duration: 4000,
-    });
+    let config = new MatSnackBarConfig();
+    config.verticalPosition = this.verticalPosition;
+    config.duration = 4000;
+    this.snackBar.open(message, action,config);
   }
-  clickvideo(video) {
+  clickvideo(video) {debugger;
     if (this.userLoggedIn == true) {
       this.clickedCourse = video;
       this.router.navigateByUrl('videos');
     }
     else {
-      this.openSnackBar('Please login to check the courses', 'Click Log In/Sign Up');
+      this.openSnackBar('Please login to check the courses', 'Log In/Sign Up');
     }
   }
 }

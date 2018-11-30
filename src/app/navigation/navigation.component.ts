@@ -33,4 +33,11 @@ export class NavigationComponent implements OnInit {
   clickAboutUs(){
     this.router.navigateByUrl('aboutus');
   }
+  clickReport(){
+    if(this.dataservice.userLoggedIn == false) {
+      this.dataservice.openSnackBar('Please Sign Up/Login', 'Sign Up/Log in')
+    }
+    else 
+    this.dataservice.openSnackBar('Please complete the course to check the Report Card', '')
+  }
 }
