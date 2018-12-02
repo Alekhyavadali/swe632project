@@ -1,3 +1,6 @@
+.main{
+    background-image: url("../../assets/images/bg2blur.jpg");
+}
 @media only screen and (min-width: 600px){
 .align {
 text-align: center;
