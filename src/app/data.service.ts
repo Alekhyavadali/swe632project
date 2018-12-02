@@ -17,26 +17,31 @@ export class DataService {
   clickedCourse: CardModel;
   mathVideos: VideoModel[] = [
     {
+      id : '1',
       video: 'Fractions',
       link: 'https://www.youtube.com//embed/1thX9Qml0Ks',
       text: 'A fraction represents a part of a whole or, more generally, any number of equal parts. '
     },
     {
+      id : '2',
       video: 'Decimals',
       link: 'https://www.youtube.com//embed/RHUl4kZDD6c',
       text: 'A fraction whose denominator is a power of ten and whose numerator is expressed by figures placed to the right of a decimal point.'
     },
     {
+      id : '3',
       video: 'Areas',
       link: 'https://www.youtube.com//embed/d_6XOBpoDz4',
       text: 'The extent or measurement of a surface or piece of land.'
     },
     {
+      id : '4',
       video: 'Integers',
       link: 'https://www.youtube.com//embed/u69pYSdwugo',
       text: 'An integer is a number that can be written without a fractional component. '
     },
     {
+      id : '5',
       video: 'Polygons',
       link: 'https://www.youtube.com//embed/EkWSlcsWCUM',
       text: ' Polygon is a plane figure that is bounded by a finite chain of straight line segments closing in a loop to form a closed polygonal chain or circuit.'
@@ -44,26 +49,31 @@ export class DataService {
   ]
   englishVideos: VideoModel[] = [
     {
+      id : '1',
       video: 'Parts of House',
       link: 'https://www.youtube.com//embed/R9intHqlzhc',
       text: 'Learn about different parts of a house'
     },
     {
+      id : '2',
       video: 'Dialogues',
       link: 'https://www.youtube.com//embed/8irSFvoyLHQ',
       text: 'Learn how sentences are formed'
     },
     {
+      id : '3',
       video: 'May I take your Order?',
       link: 'https://www.youtube.com//embed/49QFHWIky-k',
       text: 'An example of a dialogue'
     },
     {
+      id : '4',
       video: 'Weather Song',
       link: 'https://www.youtube.com//embed/-bBqBV0bcA4',
       text: 'Learn about the Weather'
     },
     {
+      id : '5',
       video: 'Opposite Words',
       link: 'https://www.youtube.com//embed/LF3crlV28xA',
       text: 'Learn about opposite words'
@@ -71,26 +81,31 @@ export class DataService {
   ]
   scienceVideos: VideoModel[] = [
     {
+      id : '1',
       video: 'Digestive System',
       link: 'https://www.youtube.com//embed/VwrsL-lCZYo',
       text: 'The gastrointestinal tract is an organ system within humans and other animals which takes in food, digests it to extract and absorb energy and nutrients, and expels the remaining waste as feces.'
     },
     {
+      id : '2',
       video: 'Black Hole',
       link: 'https://www.youtube.com//embed/IRZYMimUET8',
       text: 'A black hole is a region of spacetime exhibiting such strong gravitational effects that nothing—not even particles and electromagnetic radiation such as light—can escape from inside it. '
     },
     {
+      id : '3',
       video: 'Heart',
       link: 'https://www.youtube.com//embed/tg_ObDJEaGo',
       text: 'The heart is a muscular organ in most animals, which pumps blood through the blood vessels of the circulatory system. '
     },
     {
+      id : '4',
       video: 'Respiratory System',
       link: 'https://www.youtube.com//embed/mOKmjYwfDGU',
       text: 'The respiratory system is a biological system consisting of specific organs and structures used for gas exchange in animals and plants.'
     },
     {
+      id : '5',
       video: 'Planet Earth',
       link: 'https://www.youtube.com//embed/dk8zDjQT0aE',
       text: 'From the frozen tundra in the north to the dry forests of the equator, Sir David Attenborough narrates a compelling view of the planet. '
@@ -98,26 +113,31 @@ export class DataService {
   ]
   computerVideos: VideoModel[] = [
     {
+      id : '1',
       video: "Do's and Dont's of a Computer",
       link: 'https://www.youtube.com//embed/wHGfCn9yZGM',
       text: 'The computer plays an important role for user to store data such as videos'
     },
     {
+      id : '2',
       video: 'Computer Basics',
       link: 'https://www.youtube.com//embed/HrbQ6XvtLFo',
       text: 'Control unit, arithmetic logic unit and memory are together called the central processing unit or CPU.'
     },
     {
+      id : '3',
       video: 'Computer Parts',
       link: 'https://www.youtube.com//embed/XTGmkr1IOaA',
       text: 'Computer devices like keyboard, mouse, printer, etc. that we can see and touch are the hardware components of a computer'
     },
     {
+      id : '4',
       video: 'The Mouse',
       link: 'https://www.youtube.com//embed/ZX4Mt7wJyjg',
       text: 'A computer mouse is an input device that is most often used with a personal computer.'
     },
     {
+      id : '5',
       video: 'Switching On and Off the Computer',
       link: 'https://www.youtube.com//embed/ev-99L1rUu0',
       text: 'To switch the computer off the right way, click the Start menu and then choose Shut down. '
@@ -176,13 +196,13 @@ export class DataService {
     config.duration = 4000;
     this.snackBar.open(message, action,config);
   }
-  clickvideo(video) {debugger;
-    if (this.userLoggedIn == true) {
+  clickvideo(video) {
+    //if (this.userLoggedIn == true) {
       this.clickedCourse = video;
       this.router.navigateByUrl('videos');
-    }
-    else {
-      this.openSnackBar('Please login to check the courses', 'Log In/Sign Up');
-    }
+    //}
+    //else {
+     // this.openSnackBar('Please login to check the courses', 'Log In/Sign Up');
+   // }
   }
 }

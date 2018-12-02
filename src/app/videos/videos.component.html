@@ -2,7 +2,7 @@
 <h2 style="text-align:center"> LEARNING ROOM</h2>
   <div class="panel">
     <mat-accordion displayMode = "flat">
-      <mat-expansion-panel *ngFor="let videobunch of course.videos" (click)="videoLink(videobunch.link)">
+      <mat-expansion-panel *ngFor="let videobunch of course.videos" (click)="videoLink(videobunch)">
         <mat-expansion-panel-header>
           <mat-panel-title >
             {{videobunch.video}}
@@ -20,7 +20,7 @@
   </div>
   <div class="video container" *ngIf="link ==null">
     <div><img src="../../assets/images/start.gif" style=" width:60%; margin-left: 50px;min-height:600px;"></div>
-    <div class="centered">Let's Begin</div>
+    <!--<div class="centered">Let's Begin</div>-->
     <!-- <mat-card style="width: 80%; height: 100px;">Let us begin the Journey</mat-card> -->
   </div>
 </div>
