@@ -1,6 +1,5 @@
-
-<div style="width:100%">
-  <button mat-mini-fab (click) = "clickback()" color = "primary"> <mat-icon>keyboard_backspace</mat-icon></button>
+<div class="vid" style="width:100%">
+    <button mat-mini-fab (click) = "clickback()" color = "primary"> <mat-icon>keyboard_backspace</mat-icon></button>
 <h2 style="text-align:center"> LEARNING ROOM</h2>
 <h2 style="text-align:center">{{course.cardtitle}}</h2>
 
@@ -23,7 +22,7 @@
     <iframe id="frame" frameborder="0" [src]="link | safe" width="840" height="400" style="margin-left:50px;min-height:600px;" allowfullscreen></iframe>
   </div>
   <div class="video container" *ngIf="link ==null">
-    <div><img src="../../assets/images/start.gif" style=" width:60%; margin-left: 50px;min-height:600px;"></div>
+    <div><img src="../../assets/images/start.gif" (click)="start()" style=" width:60%; margin-left: 50px;min-height:600px;"></div>
     <!--<div class="centered">Let's Begin</div>-->
     <!-- <mat-card style="width: 80%; height: 100px;">Let us begin the Journey</mat-card> -->
   </div>
