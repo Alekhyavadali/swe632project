@@ -33,7 +33,7 @@ videoLink(video) {debugger;
   this.dataService.playingVideoname = video.video;
   this.id = video.id;
   if(this.id != 1 && this.dataService.userLoggedIn != true){
-    this.dataService.openSnackBar('Please login to check the courses', 'Log In/Sign Up');
+    this.dataService.openSnackBar('Please login to watch the videos', 'Log In/Sign Up');
   }else{
     this.link = video.link;
     this.clicked =true;
