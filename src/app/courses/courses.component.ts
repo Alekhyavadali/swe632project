@@ -16,15 +16,15 @@ export class CoursesComponent implements OnInit {
   }
   filteredItems: CardModel[] = null;
 
-filterItem(input) {debugger;
+filterItem(input) {
   if(input ==null || input == undefined) {
     this.filteredItems = this.dataService.courses;
   }
   else {
     this.filteredItems = [];
-this.filteredItems = this.dataService.courses.filter(CardModel => CardModel.cardtitle.toLowerCase().includes(input.toLowerCase()));
-debugger;
-console.log(this.filteredItems);
+    this.filteredItems = this.dataService.courses.filter(CardModel => 
+      CardModel.cardtitle.toLowerCase().includes(input.toLowerCase())
+      );
   }
 }
 

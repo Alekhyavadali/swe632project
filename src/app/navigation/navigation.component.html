@@ -4,7 +4,7 @@
     <div (click)="clickHome()" class="cursor right-spacer">
         <button mat-button>
             <mat-icon>home</mat-icon>
-            ECADAMICS
+            E-CADEMICS
         </button></div>
     <!-- <div class="right-spacer"> -->
     <!-- <button mat-button *ngIf="dataservice.userLoggedIn" title="Home Page" (click)="clickHome()" class="cursor">
@@ -32,10 +32,10 @@
         COURSES<mat-icon>keyboard_arrow_down</mat-icon>
     </button>
     <mat-menu #courseMenu="matMenu" >
-            <span (mouseleave)="menuTrigger.closeMenu()" >
-        <button mat-menu-item (click)="dataservice.clickvideo(courses)" *ngFor="let courses of dataservice.courses">
+        <span (mouseleave)="menuTrigger.closeMenu()" >
+            <button mat-menu-item (click)="dataservice.clickvideo(courses)" *ngFor="let courses of dataservice.courses">
             {{courses.cardtitle}}</button>
-</span>
+        </span>
     </mat-menu>
     <!-- <button mat-button class="cursor right-spacer goright" title="Know about us" (click)="clickAboutUs()">
         ABOUT US

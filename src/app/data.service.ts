@@ -197,12 +197,9 @@ export class DataService {
     this.snackBar.open(message, action,config);
   }
   clickvideo(video) {
-    //if (this.userLoggedIn == true) {
-      this.clickedCourse = video;
-      this.router.navigateByUrl('videos');
-    //}
-    //else {
-     // this.openSnackBar('Please login to check the courses', 'Log In/Sign Up');
-   // }
+     this.clickedCourse = video;
+     this.router.navigate(["videos"],{
+       queryParams:{'course':JSON.stringify(this.clickedCourse)}
+      });
   }
 }
