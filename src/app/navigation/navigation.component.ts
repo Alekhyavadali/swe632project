@@ -1,17 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , ViewChild} from '@angular/core';
 import { Router } from '@angular/router';
 import { Routes, RouterModule } from '@angular/router';
 import { DataService } from '../data.service';
-
+import { VERSION, MatMenuTrigger } from '@angular/material';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
-
   constructor(private dataservice: DataService,private router: Router) { }
-
+  @ViewChild(MatMenuTrigger) menu2Trigger: MatMenuTrigger;
   ngOnInit() {
   }
   clicksign(){
@@ -39,5 +38,8 @@ export class NavigationComponent implements OnInit {
     }
     else 
     this.dataservice.openSnackBar('Please complete the course to check the Report Card', '')
+  }
+  closeMenu(){
+    this.menu2Trigger.closeMenu();
   }
 }

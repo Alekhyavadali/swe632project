@@ -1,5 +1,9 @@
+
 <div style="width:100%">
+  <button mat-mini-fab (click) = "clickback()" color = "primary"> <mat-icon>keyboard_backspace</mat-icon></button>
 <h2 style="text-align:center"> LEARNING ROOM</h2>
+<h2 style="text-align:center">{{course.cardtitle}}</h2>
+
   <div class="panel">
     <mat-accordion displayMode = "flat">
       <mat-expansion-panel *ngFor="let videobunch of course.videos" (click)="videoLink(videobunch)">

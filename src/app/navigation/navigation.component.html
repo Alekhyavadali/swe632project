@@ -11,37 +11,51 @@
             <mat-icon>home</mat-icon>
         </button> -->
     <!-- Courses -->
-    <button mat-button class="cursor right-spacer goright" mat-button *ngIf="!dataservice.userLoggedIn" title="Signup to avail exclusive features"
-        (click)="clicksign()">
+    <button mat-button class="cursor right-spacer goright"
+             mat-button *ngIf="!dataservice.userLoggedIn"
+                        title="Signup to avail exclusive features"
+                        (click)="clicksign()">
         SIGN UP | LOG IN
     </button>
     <!-- Signup will change to settings -->
-    <button mat-button [matMenuTriggerFor]="menu" #menu2Trigger="matMenuTrigger" (mouseenter)="menu2Trigger.openMenu()"
-         title="Change settings" *ngIf="dataservice.userLoggedIn">
-        {{dataservice.username.toUpperCase()}}<mat-icon>keyboard_arrow_down</mat-icon>
+    <button mat-button [matMenuTriggerFor]="menu"
+                         #menu2Trigger="matMenuTrigger"
+                         (mouseenter)="menu2Trigger.openMenu()"
+                        title="Change settings"
+                         *ngIf="dataservice.userLoggedIn">
+        {{dataservice.username.toUpperCase()}}
+        <mat-icon>keyboard_arrow_down</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-            <span (mouseleave)="menu2Trigger.closeMenu()">
-        <button mat-menu-item (click)="dataservice.changeTheme()">Change Theme</button>
-        <!-- <button mat-menu-item (click)="clickProfile()">My Profile</button> -->
-        <button mat-menu-item (click)="clickLogOut()">Log out</button>
-</span>
-    </mat-menu>
-    <button mat-button class="cursor right-spacer goright" #menuTrigger="matMenuTrigger" (mouseenter)="menuTrigger.openMenu()"
-         [matMenuTriggerFor]="courseMenu" title="check the courses">
-        COURSES<mat-icon>keyboard_arrow_down</mat-icon>
+                <span (mouseleave)="closeMenu()">
+                <button mat-menu-item (click)="dataservice.changeTheme()">
+                Change Theme
+                </button>
+                <button mat-menu-item
+                 (click)="clickLogOut()">
+                 Log out
+                </button>
+                </span>
+                </mat-menu>
+    <button mat-button class="cursor right-spacer goright"
+                         #menuTrigger="matMenuTrigger" 
+                         (mouseenter)="menuTrigger.openMenu()"
+                         [matMenuTriggerFor]="courseMenu" 
+                         title="check the courses">
+                        COURSES
+                        <mat-icon>keyboard_arrow_down</mat-icon>
     </button>
     <mat-menu #courseMenu="matMenu" >
         <span (mouseleave)="menuTrigger.closeMenu()" >
-            <button mat-menu-item (click)="dataservice.clickvideo(courses)" *ngFor="let courses of dataservice.courses">
+            <button mat-menu-item (click)="dataservice.clickvideo(courses)" 
+            *ngFor="let courses of dataservice.courses">
             {{courses.cardtitle}}</button>
         </span>
     </mat-menu>
-    <!-- <button mat-button class="cursor right-spacer goright" title="Know about us" (click)="clickAboutUs()">
-        ABOUT US
-    </button> -->
-    <button mat-button class="cursor right-spacer goright" (click) = "clickReport()" title="Report Card" *ngIf="dataservice.userLoggedIn">
+    <button mat-button class="cursor right-spacer goright"
+                         (click) = "clickReport()"
+                          title="Report Card"
+                           *ngIf="dataservice.userLoggedIn">
             REPORT CARD
         </button>
-    <!-- </div> -->
 </div>

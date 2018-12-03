@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import {DataService} from '../data.service';
 import { CardModel } from '../card.model';
 import { ActivatedRoute } from '@angular/router';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-videos',
@@ -13,8 +14,8 @@ export class VideosComponent implements OnInit {
  id = null;
  link = null;
  clicked = false;
-  constructor(private dataService: DataService, private route:ActivatedRoute) { 
-    this.route.queryParams.subscribe(params =>{
+  constructor(private dataService: DataService, private route:ActivatedRoute, private router: Router ) { 
+    this.route.queryParams.subscribe(params =>{debugger;
       this.course= JSON.parse(params.course);
     });
   }
@@ -30,5 +31,8 @@ videoLink(video) {
     this.link = video.link;
     this.clicked =true;
   }  
+}
+clickback(){
+  this.router.navigateByUrl('courses');
 }
 }
