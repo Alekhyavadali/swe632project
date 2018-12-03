@@ -15,8 +15,9 @@ export class VideosComponent implements OnInit {
  link = null;
  clicked = false;
   constructor(private dataService: DataService, private route:ActivatedRoute, private router: Router ) { 
-    this.route.queryParams.subscribe(params =>{debugger;
+    this.route.queryParams.subscribe(params =>{
       this.course= JSON.parse(params.course);
+      this.link = this.course.videos['0'].link;
     });
   }
 
@@ -35,9 +36,9 @@ videoLink(video) {
 clickback(){
   this.router.navigateByUrl('courses');
 }
-start(){
+/*start(){
   this.link = this.course.videos['0'].link;
   this.clicked =true;
   console.log(this.link);
-}
+}*/
 }
