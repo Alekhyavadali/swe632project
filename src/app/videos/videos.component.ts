@@ -21,7 +21,7 @@ export class VideosComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
 videoLink(video) {
   this.id = video.id;
   if(this.id != 1 && this.dataService.userLoggedIn != true){
@@ -30,5 +30,11 @@ videoLink(video) {
     this.link = video.link;
     this.clicked =true;
   }  
+}
+
+start(){
+  this.link = this.course.videos['0'].link;
+  this.clicked =true;
+  console.log(this.link);
 }
 }
