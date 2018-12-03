@@ -16,8 +16,9 @@ export class VideosComponent implements OnInit {
  clicked = false;
  
   constructor(private dataService: DataService, private route:ActivatedRoute, private router: Router ) { 
-    this.route.queryParams.subscribe(params =>{debugger;
+    this.route.queryParams.subscribe(params =>{
       this.course= JSON.parse(params.course);
+      this.link = this.course.videos['0'].link;
     });
   }
 
@@ -41,11 +42,11 @@ videoLink(video) {debugger;
 clickback(){
   this.router.navigateByUrl('courses');
 }
-start(){
+/*start(){
   this.link = this.course.videos['0'].link;
   this.clicked =true;
   console.log(this.link);
-}
+}*/
 getColor(id, videoname) {
   if(videoname.playing ==true)
   return "blue";
