@@ -1,19 +1,20 @@
+
 <div style="width:100%">
-    <button mat-mini-fab (click) = "clickback()" color = "primary"> <mat-icon>keyboard_backspace</mat-icon></button>
+  <button mat-mini-fab (click) = "clickback()" color = "primary"> <mat-icon>keyboard_backspace</mat-icon></button>
 <h2 style="text-align:center"> LEARNING ROOM</h2>
 <h2 style="text-align:center">{{course.cardtitle}}</h2>
-
+<br/>
   <div class="panel">
     <mat-accordion displayMode = "flat">
-      <mat-expansion-panel *ngFor="let videobunch of course.videos let index = i" (click)="videoLink(videobunch)" >
-        <mat-expansion-panel-header >
+      <mat-expansion-panel *ngFor="let videobunch of course.videos let index = i" (click)="videoLink(videobunch)">
+        <mat-expansion-panel-header>
           <mat-panel-title [style.color] = "getColor(i, videobunch)">
-            {{videobunch.video}}
+            <strong>{{videobunch.video}}</strong>
           </mat-panel-title>
            <!-- <mat-panel-description>
           </mat-panel-description>  -->
         </mat-expansion-panel-header>
-        {{videobunch?.text}}
+        <i>{{videobunch?.text}}</i>
       </mat-expansion-panel>
     </mat-accordion>
 

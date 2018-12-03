@@ -19,13 +19,14 @@ export class VideosComponent implements OnInit {
     this.route.queryParams.subscribe(params =>{
       this.course= JSON.parse(params.course);
       this.link = this.course.videos['0'].link;
+      this.course.videos['0'].playing =true;
     });
   }
 
   ngOnInit() {
   }
 
-videoLink(video) {debugger;
+videoLink(video) {
  for(let i=0; i< this.course.videos.length; i++){
    this.course.videos[i].playing =false;
  }
