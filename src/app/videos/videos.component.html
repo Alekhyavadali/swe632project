@@ -5,9 +5,9 @@
 
   <div class="panel">
     <mat-accordion displayMode = "flat">
-      <mat-expansion-panel *ngFor="let videobunch of course.videos" (click)="videoLink(videobunch)">
-        <mat-expansion-panel-header>
-          <mat-panel-title >
+      <mat-expansion-panel *ngFor="let videobunch of course.videos let index = i" (click)="videoLink(videobunch)" >
+        <mat-expansion-panel-header >
+          <mat-panel-title [style.color] = "getColor(i, videobunch)">
             {{videobunch.video}}
           </mat-panel-title>
            <!-- <mat-panel-description>

@@ -14,6 +14,7 @@ export class VideosComponent implements OnInit {
  id = null;
  link = null;
  clicked = false;
+ 
   constructor(private dataService: DataService, private route:ActivatedRoute, private router: Router ) { 
     this.route.queryParams.subscribe(params =>{debugger;
       this.course= JSON.parse(params.course);
@@ -23,7 +24,12 @@ export class VideosComponent implements OnInit {
   ngOnInit() {
   }
 
-videoLink(video) {
+videoLink(video) {debugger;
+ for(let i=0; i< this.course.videos.length; i++){
+   this.course.videos[i].playing =false;
+ }
+  video.playing = true;
+  this.dataService.playingVideoname = video.video;
   this.id = video.id;
   if(this.id != 1 && this.dataService.userLoggedIn != true){
     this.dataService.openSnackBar('Please login to check the courses', 'Log In/Sign Up');
@@ -39,5 +45,10 @@ start(){
   this.link = this.course.videos['0'].link;
   this.clicked =true;
   console.log(this.link);
+}
+getColor(id, videoname) {
+  if(videoname.playing ==true)
+  return "blue";
+
 }
 }
