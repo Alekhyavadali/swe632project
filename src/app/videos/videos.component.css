@@ -1,13 +1,24 @@
+.vidPage{
+    background-color:  rgb(202, 220, 228);
+}
 .video {
     width: 70%;
     float: left;
-    margin-top: 100px;
+    margin-top: 0px;
+    background-color:  rgb(202, 220, 228);
 }
 .panel {
     width: 30%;
     float: left;
-    margin-top: 100px;
-    min-height: 400px;
+    margin-top: 0px;
+    min-height: 604px;
+    background-color:  rgb(202, 220, 228);
+}
+
+h2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color:  rgb(202, 220, 228);
 }
 .mat-accordion {
     max-width:10px;
