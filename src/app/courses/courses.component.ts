@@ -27,5 +27,8 @@ filterItem(input) {
       );
   }
 }
-
+snack(){debugger;
+  
+  this.dataService.openSnackBar('Please Login to like this course', 'Login/Signup');
+}
 }
