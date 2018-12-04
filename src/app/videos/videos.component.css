@@ -12,7 +12,7 @@ a{
 }
 .panel {
     width: 30%;
-    float: left;
+    float: right;
     margin-top: 0px;
     min-height: 604px;
     background-color:  rgb(202, 220, 228);
