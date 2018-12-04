@@ -1,6 +1,9 @@
 .vidPage{
     background-color:  rgb(202, 220, 228);
 }
+a{
+    font-size: 18px;
+}
 .video {
     width: 70%;
     float: left;

@@ -40,10 +40,10 @@ videoLink(video) {
     this.clicked =true;
   }  
 }
-clickback(){
+/*clickback(){
   this.router.navigateByUrl('courses');
 }
-/*start(){
+start(){
   this.link = this.course.videos['0'].link;
   this.clicked =true;
   console.log(this.link);
