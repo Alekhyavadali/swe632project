@@ -21,6 +21,7 @@
     <button mat-button [matMenuTriggerFor]="menu"
                          #menu2Trigger="matMenuTrigger"
                          (mouseenter)="menu2Trigger.openMenu()"
+                         class="cursor right-spacer goright"
                         title="Change settings"
                          *ngIf="dataservice.userLoggedIn">
         {{dataservice.username.toUpperCase()}}
