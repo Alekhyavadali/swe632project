@@ -53,4 +53,7 @@ getColor(id, videoname) {
   return "blue";
 
 }
+submit(){
+  this.dataService.openSnackBar('Successfully saved', 'Course completed');
+}
 }

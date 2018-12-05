@@ -17,6 +17,16 @@
         </mat-expansion-panel-header>
         <i>{{videobunch?.text}}</i>
       </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <strong>What did you learn?</strong>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Summarize what you have learn in this course</p>
+        <textarea rows="4" cols="50"></textarea><br>
+        <button mat-flat-button (click) = "submit()">Submit</button>
+      </mat-expansion-panel>
     </mat-accordion>
 
   </div>
